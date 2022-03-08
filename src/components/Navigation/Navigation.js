@@ -8,7 +8,9 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
-import { useTheme } from '@mui/material';
+import { Container, useTheme } from '@mui/material';
+import './Navigation.css'
+// import bikelogo from '../../image/Bike_Nation-removebg-preview.png'
 
 
 import Drawer from '@mui/material/Drawer';
@@ -52,30 +54,34 @@ export default function Navigation() {
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
-                    <Toolbar>
-                        <IconButton
-                            size="large"
-                            edge="start"
-                            color="inherit"
-                            aria-label="menu"
-                            sx={{ mr: 2 }}
-                            className={navIcon}
-                            onClick={() => setState(true)}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} className={navLogo}>
-                            Bike Nation
-                        </Typography>
-                        <Box className={navItemContainer}>
-                            <Link className={navItem} to="/"><Button color="inherit">Home</Button></Link>
-                            <Link className={navItem} to="/about"><Button color="inherit">About</Button></Link>
-                            <Link className={navItem} to="/service"><Button color="inherit">Service</Button></Link>
-                        </Box>
+                <AppBar position="static" style={{ backgroundColor: "#212121", color: "#fff" }}>
+                    <Container>
+                        <Toolbar>
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                color="inherit"
+                                aria-label="menu"
+                                sx={{ mr: 2 }}
+                                className={navIcon}
+                                onClick={() => setState(true)}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} className={navLogo}>
+                               <span className='logo'>Bike Nation</span>
+                            </Typography>
+                            
+                            <Box className={navItemContainer}>
+                                <Link className={navItem} to="/"><Button color="inherit">Home</Button></Link>
+                                <Link className={navItem} to="/about"><Button color="inherit">About</Button></Link>
+                                <Link className={navItem} to="/service"><Button color="inherit">Service</Button></Link>
+                            </Box>
 
-                    </Toolbar>
+                        </Toolbar>
+                    </Container>
                 </AppBar>
+
             </Box>
             <div>
                 <React.Fragment>
