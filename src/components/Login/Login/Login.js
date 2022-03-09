@@ -17,7 +17,7 @@ const Login = () => {
     }
 
     const handleLoginSubmit = e => {
-        alert('helllo')
+        alert('hello')
         e.preventDefault()
     }
     return (
