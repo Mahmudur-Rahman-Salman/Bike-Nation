@@ -10,9 +10,6 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 import { Container, useTheme } from '@mui/material';
 import './Navigation.css'
-// import bikelogo from '../../image/Bike_Nation-removebg-preview.png'
-
-
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -20,7 +17,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
 
+
 export default function Navigation() {
+
+
     const theme = useTheme();
     const useStyle = makeStyles({
         navItem: {
@@ -69,13 +69,16 @@ export default function Navigation() {
                                 <MenuIcon />
                             </IconButton>
                             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} className={navLogo}>
-                               <span className='logo'>Bike Nation</span>
+                                <span className='logo'>Bike Nation</span>
                             </Typography>
-                            
+
                             <Box className={navItemContainer}>
                                 <Link className={navItem} to="/"><Button color="inherit">Home</Button></Link>
                                 <Link className={navItem} to="/about"><Button color="inherit">About</Button></Link>
                                 <Link className={navItem} to="/service"><Button color="inherit">Service</Button></Link>
+
+                                <Link className={navItem} to="/login"><Button color="inherit">Login</Button></Link>
+
                             </Box>
 
                         </Toolbar>
