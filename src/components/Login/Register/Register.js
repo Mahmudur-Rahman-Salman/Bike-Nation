@@ -10,7 +10,8 @@ const Register = () => {
     const [loginData, setLoginData] = useState({});
     const { user, registerUser, isLoading, authError } = useAuth();
 
-    const handleOnChange = e => {
+
+    const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
         const newLoginData = { ...loginData };
@@ -41,7 +42,7 @@ const Register = () => {
                             label="Your Email"
                             name="email"
                             type="email"
-                            onChange={handleOnChange}
+                            onBlur={handleOnBlur}
                             variant="standard" />
                         <TextField
                             sx={{ width: '100%', m: 1 }}
@@ -49,7 +50,7 @@ const Register = () => {
                             label="Your Password"
                             type="password"
                             name="password"
-                            onChange={handleOnChange}
+                            onBlur={handleOnBlur}
                             variant="standard" />
                         <TextField
                             sx={{ width: '100%', m: 1 }}
@@ -57,7 +58,7 @@ const Register = () => {
                             label="Retype Password"
                             type="password"
                             name="password2"
-                            onChange={handleOnChange}
+                            onBlur={handleOnBlur}
                             variant="standard" />
 
                         <Button sx={{ width: '100%', m: 1 }} type="submit" variant="contained">Register</Button>

@@ -74,7 +74,8 @@ const Navigation = () => {
                             <Box className={navItemContainer}>
                                 <Link className={navItem} to="/"><Button color="inherit">Home</Button></Link>
                                 <Link className={navItem} to="/about"><Button color="inherit">About</Button></Link>
-                                <Link className={navItem} to="/service"><Button color="inherit">Service</Button></Link>
+                                <Link className={navItem} to="/services"><Button color="inherit">Services</Button></Link>
+                                <Link className={navItem} to="/addService"><Button color="inherit">Add-Service</Button></Link>
                                 {
                                     user?.email ?
                                         <Button onClick={logout} color="inherit">Logout</Button>
