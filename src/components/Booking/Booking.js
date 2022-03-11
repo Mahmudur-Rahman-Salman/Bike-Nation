@@ -53,7 +53,7 @@ const Booking = () => {
             .then(data => {
                 if (data.insertedId) {
                     alert("successfully added the order")
-
+                    setOrderInfo("");
                 }
             })
 

@@ -79,7 +79,11 @@ const Navigation = () => {
                                 <Link className={navItem} to="/reviews"><Button color="inherit">Add-Reviews</Button></Link>
                                 {
                                     user?.email ?
-                                        <Button onClick={logout} color="inherit">Logout</Button>
+                                        <Box>
+                                            <Link className={navItem} to="/dashboard"><Button color="inherit">Dashboard</Button></Link>
+                                            <Button onClick={logout} color="inherit">Logout</Button>
+                                        </Box>
+
                                         :
                                         <Link className={navItem} to="/login"><Button color="inherit">Login</Button></Link>
                                 }

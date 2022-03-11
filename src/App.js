@@ -7,6 +7,7 @@ import About from './components/About/About';
 import AddReviews from './components/AddReviews/AddReviews';
 import AddService from './components/AddService/AddService';
 import Booking from './components/Booking/Booking';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login/Login';
@@ -33,6 +34,7 @@ function App() {
             <Route path='/login'><Login></Login></Route>
             <Route path='/reviews'><AddReviews></AddReviews></Route>
             <PrivateRoute path='/booking/:serviceId'><Booking></Booking></PrivateRoute>
+            <PrivateRoute path='/dashboard'><Dashboard></Dashboard></PrivateRoute>
             <Route path='/register'><Register></Register></Route>
           </Switch>
           <Footer></Footer>
