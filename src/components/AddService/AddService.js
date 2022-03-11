@@ -9,7 +9,7 @@ const AddService = () => {
     const { register, handleSubmit, reset} = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://gentle-gorge-15121.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Successfully added the service.');

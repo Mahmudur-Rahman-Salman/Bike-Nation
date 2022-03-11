@@ -23,7 +23,7 @@ const Booking = () => {
     const [orderInfo, setOrderInfo] = useState(initialInfo);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://gentle-gorge-15121.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
@@ -42,7 +42,7 @@ const Booking = () => {
             ...orderInfo
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://gentle-gorge-15121.herokuapp.com/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
