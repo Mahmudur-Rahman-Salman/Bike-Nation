@@ -13,6 +13,7 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import Navigation from './components/Navigation/Navigation';
+import Notfound from './components/Notfound/Notfound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Services from './components/Services/Services';
 import AuthProvider from './context/AuthProvider';
@@ -36,6 +37,7 @@ function App() {
             <PrivateRoute path='/booking/:serviceId'><Booking></Booking></PrivateRoute>
             <PrivateRoute path='/dashboard'><Dashboard></Dashboard></PrivateRoute>
             <Route path='/register'><Register></Register></Route>
+            <Route path='*'><Notfound></Notfound></Route>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>

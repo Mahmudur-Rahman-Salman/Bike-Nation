@@ -75,8 +75,11 @@ const Navigation = () => {
                                 <Link className={navItem} to="/"><Button color="inherit">Home</Button></Link>
                                 <Link className={navItem} to="/about"><Button color="inherit">About</Button></Link>
                                 <Link className={navItem} to="/services"><Button color="inherit">Services</Button></Link>
-                                <Link className={navItem} to="/addService"><Button color="inherit">Add-Service</Button></Link>
-                                <Link className={navItem} to="/reviews"><Button color="inherit">Add-Reviews</Button></Link>
+
+                                {user.email && <Link className={navItem} to="/addService"><Button color="inherit">Add-Service</Button></Link>}
+
+                                {user.email && <Link className={navItem} to="/reviews"><Button color="inherit">Add-Reviews</Button></Link>}
+
                                 {
                                     user?.email ?
                                         <Box>
