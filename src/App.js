@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import AddReviews from './components/AddReviews/AddReviews';
 import AddService from './components/AddService/AddService';
 import Booking from './components/Booking/Booking';
 import Footer from './components/Footer/Footer';
@@ -30,6 +31,7 @@ function App() {
             <Route path='/services'><Services></Services></Route>
             <Route path='/addService'><AddService></AddService></Route>
             <Route path='/login'><Login></Login></Route>
+            <Route path='/reviews'><AddReviews></AddReviews></Route>
             <PrivateRoute path='/booking/:serviceId'><Booking></Booking></PrivateRoute>
             <Route path='/register'><Register></Register></Route>
           </Switch>
